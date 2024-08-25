@@ -5,7 +5,16 @@
 * {
     font-family: "Work Sans", sans-serif;
     font-optical-sizing: auto;
+}
 
+.gray {
+    color: #727272;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    color: #131313;
 }
 
 .btn-primary {
@@ -29,12 +38,6 @@ nav {
     justify-content: space-between;
     align-items: center;
  
-}
-
-.nav-title {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #131313;
 }
 
 nav > ul {
@@ -75,32 +78,15 @@ nav li a {
     width: 100%;
 }
 
-@media screen and (max-width: 576px) {
-    header {
-        padding: 20px;
-    }
-    nav {
-        flex-direction: column;
-    }
-}
-
-@media screen and (min-width: 576px) and (max-width: 960px) {
-    header {
-        padding: 50px;
-    }
-    nav {
-        flex-direction: column;
-    }
-}
-
 main {
     max-width: 1440px;
-    margin: 0 auto;
+    margin: 70px auto;
 }
 
 .teams-container {
     display: flex;
     align-items: center;
+
 }
 
 .teams-img {
@@ -126,4 +112,78 @@ main {
 .teams-title .features {
     color: #FF900E;
     font-weight: 900;
+}
+
+.facts-container .card {
+    border-radius: 8px;
+    border: 1px solid #FF900E;
+    text-align: center;
+    padding: 30px;
+}
+
+.facts-container{
+    display: flex;
+    justify-content: space-around;
+}
+
+.facts-container .card-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 5px;
+}
+
+.facts-container .card-stat {
+    font-size: 2.8rem;
+    color: #424242;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.sponsors {
+    text-align: center;
+}
+
+.sponsors-container {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 50px;
+    align-items: center;
+    gap: 40px;
+}
+
+.sponsors-container img {
+    width: 165px;
+}
+
+
+@media screen and (max-width: 576px) {
+    header {
+        padding: 20px;
+    }
+    nav, .teams-container, .facts-container, .sponsors-container {
+        flex-direction: column;
+    }
+    .teams-img {
+        grid-template-columns: 1fr;
+    }
+    .teams-content, .facts-container{
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+    .facts-container {
+        gap: 20px;
+    }
+    
+}
+
+@media screen and (min-width: 576px) and (max-width: 960px) {
+    header {
+        padding: 50px;
+    }
+    nav, .teams-container, .sponsors-container {
+        flex-direction: column;
+    }
+    .facts-container {
+        gap: 10px;
+    }
 }
